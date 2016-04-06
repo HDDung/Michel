@@ -1,6 +1,6 @@
 #include "Grap.h"
 
-#define RandomValue 8
+#define RandomValue 987
 #define RandomChannel 10
 
 

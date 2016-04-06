@@ -7,6 +7,7 @@
 void Consensus::Input(Grap grap_input)
 {
 	grap = grap_input;
+	W.resize(grap.Num_Node(), std::vector<double>(grap.Num_Node(), 0));
 }
 
 void Consensus::Cal_W_LDegree()
@@ -101,19 +102,26 @@ void Consensus::Cal_W_EWeight(double e)
 void Consensus::Cal_A()
 {
 	int i, j;
+	
+	/*
 	double at1[100];
 	double at2[100];
+	*/
 	unsigned long long loop = 0;
 	bool stop = 0;
 	
 	int n = grap.Num_Node();
 	GrapNode* Node_pt1 = NULL;
 
+	std::vector<double> at1(n, 0), at2(n, 0);
+	// Initial value
 	for (i = 0; i < n; i++) {
 		Node_pt1 = grap.Node(i);
 		at1[i] = Node_pt1->Data();
 	}
 	double temp;
+
+
 	do
 	{
 		loop++;
@@ -123,7 +131,7 @@ void Consensus::Cal_A()
 			at2[i] = at1[i];
 			Node_pt1 = grap.Node(i);
 			std::vector<GrapNode*> list = Node_pt1->Neighbor();
-			
+			// taking value from neighbor 
 			for (size_t k = 0; k < list.size(); k++)
 			{
 				j = list[k]->NodeNum();
@@ -131,14 +139,15 @@ void Consensus::Cal_A()
 			}
 
 			
+		
 			
 			temp = fabs(at2[i] - at1[i]);
 				//grap.Ave());
-			if (temp < 1.0e-6)
+			if (temp < 1.0e-6 )
 			{
 				std::cout << " --> Convergence at iteration " << loop << "; agent " << i << " reaches value = " << at2[i] << std::endl;
-				//stop = 1;
-				system("pause");
+				stop = 1;
+				//system("pause");
 			}
 		}
 
@@ -149,6 +158,62 @@ void Consensus::Cal_A()
 		}
 
 		for (i = 0; i < n;i++) at1[i] = at2[i];
+	} while (!stop && loop <= maxLOOP);
+}
+
+void Consensus::Cal_A_RandNegi()
+{
+	int i, j;
+	/*
+	double at1[100];
+	double at2[100];
+	*/
+	unsigned long long loop = 0;
+	bool stop = 0;
+
+	int n = grap.Num_Node();
+	GrapNode* Node_pt1 = NULL;
+
+	std::vector<double> at1(n, 0), at2(n, 0);
+
+	for (i = 0; i < n; i++) {
+		Node_pt1 = grap.Node(i);
+		at1[i] = Node_pt1->Data();
+	}
+
+	std::srand(time(NULL));
+	double temp;
+	do
+	{
+		loop++;
+		for (i = 0; i < n; i++)
+		{
+
+			at2[i] = at1[i];
+			Node_pt1 = grap.Node(i);
+			std::vector<GrapNode*> list = Node_pt1->Neighbor();
+			// taking value from neighbor randomly
+			int RandIndex = rand() % list.size();
+			j = list[RandIndex]->NodeNum();
+			at2[i] += W[i][j] * (at1[j] - at1[i]);
+
+			temp = fabs(at2[i] - at1[i]);
+			//grap.Ave());
+			if (temp < 1.0e-6 )
+			{
+				std::cout << " --> Convergence at iteration " << loop << "; agent " << i << " reaches value = " << at2[i] << std::endl;
+				stop = 1;
+				//system("pause");
+			}
+		}
+
+		if (loop % 1000 == 0) {
+			for (i = 0; i < n; i++) std::cout << at2[i] << " ";
+			std::cout << std::endl << loop << " " << std::endl;
+
+		}
+
+		for (i = 0; i < n; i++) at1[i] = at2[i];
 	} while (!stop && loop <= maxLOOP);
 }
 

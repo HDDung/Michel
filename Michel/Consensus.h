@@ -4,6 +4,7 @@
 #include <math.h>
 #include <vector>
 #include <iostream>
+#include <time.h>
 
 class Consensus
 {
@@ -24,6 +25,8 @@ public:
 	void Cal_W_EWeight(double e);
 	// Consensus Algorithm 
 	void Cal_A();
+	// Consensus Algorithm with random choosing neighbor
+	void Cal_A_RandNegi();
 
 	//Defense solution 
 	void Def_5();
@@ -32,7 +35,8 @@ private:
 	unsigned long long maxLOOP = 1.0e+18;
 	double comVAL = 0;
 	Grap grap;
-	double W[100][100];
+	std::vector<std::vector<double>> W;
+	//double W[100][100];
 	int Ave;
 	double Speed;
 

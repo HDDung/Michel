@@ -7,7 +7,8 @@
 void main() {
 	int a;
 	Grap Tour; 
-	Tour.Tour(5, 5); 
+	
+	Tour.Tour(30, 30); 
 	Tour.Input(12, 5, 1);
 	Consensus  consensus;
 
@@ -15,20 +16,23 @@ void main() {
 	std::cout << Tour.Ave() << std::endl;
 	
 	
-
+	/*
 	Attacker Attack1;
 
 	Attack1.Input(0.5, 4, Tour);
 	Attack1.Attack();
 	std::cout << Attack1.Number_BNodes() << std::endl;
 	Grap A_Tour = Attack1.Output();
-
-	A_Tour.ComVal();
-	std::cout << A_Tour.Ave() << std::endl;
-	consensus.Input(A_Tour);
-	consensus.Cal_W_EWeight(0.5);
+	*/
+	//A_Tour.ComVal();
+	//std::cout << A_Tour.Ave() << std::endl;
+	//consensus.Input(A_Tour);
+	consensus.Input(Tour);
+	//consensus.Cal_W_EWeight(0.5);
+	consensus.Cal_W_MetroHast();
 	consensus.Cal_A();
-
+	system("pause");
+	consensus.Cal_A_RandNegi();
 	/*
 	Grap Ring;
 	Ring.Ring(9); // create ring graph
