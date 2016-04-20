@@ -1,0 +1,113 @@
+Ave Value of Graph: 502.771
+Normal Consensus
+ --> Convergence at iteration 2283; agent 59 reaches value = 502.771
+0.00000000
+502.77111977 502.77111977
+Random Neighbour
+ --> Convergence at iteration 3828; agent 440 reaches value = 505.17146101
+440 410 268.00000000 944.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 503.71777778
+Normal Consensus
+ --> Convergence at iteration 1815; agent 662 reaches value = 503.71417682
+0.00000000
+503.71417682 503.71417682
+Random Neighbour
+ --> Convergence at iteration 4; agent 690 reaches value = 503.18518519
+690 660 714.00000000 405.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 486.82111111
+Normal Consensus
+ --> Convergence at iteration 2619; agent 723 reaches value = 486.82101052
+0.00000000
+486.82101052 486.82101052
+Random Neighbour
+ --> Convergence at iteration 3114; agent 654 reaches value = 488.06782471
+654 624 780.00000000 910.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 493.22777778
+Normal Consensus
+ --> Convergence at iteration 1; agent 565 reaches value = 365.00000000
+0.00000000
+365.00000000 365.00000000
+Random Neighbour
+ --> Convergence at iteration 3868; agent 182 reaches value = 482.22269521
+182 152 760.00000000 806.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 495.63333333
+Normal Consensus
+ --> Convergence at iteration 2; agent 508 reaches value = 510.33333333
+0.00000000
+510.33333333 510.33333333
+ --> Convergence at iteration 2; agent 732 reaches value = 372.66666667
+0.00000000
+372.66666667 372.66666667
+Random Neighbour
+ --> Convergence at iteration 2; agent 257 reaches value = 709.00000000
+257 258 703.00000000 712.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 489.23777778
+Normal Consensus
+ --> Convergence at iteration 2574; agent 453 reaches value = 489.23780811
+0.00000000
+489.23780811 489.23780811
+Random Neighbour
+ --> Convergence at iteration 3279; agent 522 reaches value = 495.97178006
+522 523 798.00000000 719.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 511.41666667
+Normal Consensus
+ --> Convergence at iteration 3; agent 388 reaches value = 644.22222222
+0.00000000
+644.22222222 644.22222222
+Random Neighbour
+ --> Convergence at iteration 2; agent 215 reaches value = 250.00000000
+215 185 10.00000000 370.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 475.90000000
+Normal Consensus
+ --> Convergence at iteration 2395; agent 637 reaches value = 475.89984855
+0.00000000
+475.89984855 475.89984855
+Random Neighbour
+ --> Convergence at iteration 3801; agent 704 reaches value = 476.85502551
+704 674 495.00000000 204.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 501.31666667
+Normal Consensus
+ --> Convergence at iteration 2322; agent 877 reaches value = 501.31678803
+0.00000000
+501.31678803 501.31678803
+Random Neighbour
+ --> Convergence at iteration 3788; agent 191 reaches value = 501.26279691
+191 192 896.00000000 569.00000000
+0.00000000
+
+-----------------------------------------------------
+Ave Value of Graph: 504.95777778
+Normal Consensus
+ --> Convergence at iteration 1908; agent 286 reaches value = 504.95501976
+0.00000000
+504.95501976 504.95501976
+Random Neighbour
+ --> Convergence at iteration 3408; agent 462 reaches value = 503.52082265
+462 432 976.00000000 681.00000000
+0.00000000
+
+-----------------------------------------------------

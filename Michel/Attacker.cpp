@@ -6,7 +6,7 @@ Attacker::Attacker()
 {
 }
 
-void Attacker::Input(double P, double D, Grap graph)
+void Attacker::Input(long double P, long double D, Graph graph)
 {
 	Prob = P;
 	Delta = D;
@@ -16,7 +16,7 @@ void Attacker::Input(double P, double D, Grap graph)
 
 void Attacker::Attack()
 {
-	double ave_h = 0;
+	long double ave_h = 0;
 	for (size_t i = 0; i < A_graph.Num_Node(); i++)
 	{
 		ave_h += A_graph.Node(i)->ReturnChannelGain();
@@ -33,7 +33,7 @@ void Attacker::Attack()
 	}
 }
 
-Grap Attacker::Output()
+Graph Attacker::Output()
 {
 	return A_graph;
 }

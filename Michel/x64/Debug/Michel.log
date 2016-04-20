@@ -1,6 +1,6 @@
 ﻿cl : Command line warning D9002: ignoring unknown option '/arch:SSE2'
   Consensus.cpp
-g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.h(35): warning C4244: 'initializing': conversion from 'double' to 'unsigned __int64', possible loss of data
+g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.h(37): warning C4244: 'initializing': conversion from 'double' to 'unsigned __int64', possible loss of data
 g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(21): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
@@ -8,5 +8,5 @@ g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.c
 g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(69): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(184): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+g:\users\dung123\documents\visual studio 2015\projects\michel\michel\consensus.cpp(192): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Michel.vcxproj -> G:\Users\dung123\documents\visual studio 2015\Projects\Michel\x64\Debug\Michel.exe

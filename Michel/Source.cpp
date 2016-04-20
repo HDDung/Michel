@@ -2,20 +2,41 @@
 #include "Consensus.h"
 #include "Attacker.h"
 
+
 #include <iostream>
+#include <fstream>
+
+#define OUTFILE "OutPut2.txt"
 
 void main() {
 	int a;
-	Grap Tour; 
-	
-	Tour.Tour(30, 30); 
-	Tour.Input(12, 5, 1);
-	Consensus  consensus;
 
-	Tour.ComVal();
-	std::cout << Tour.Ave() << std::endl;
+	std::ofstream out(OUTFILE);
+
+	int n = 30;
 	
-	
+	for (int i = 0; i < n; i++)
+	{
+		Graph Torus;
+
+		Torus.Torus(30, 30);
+		Torus.Input(12, 5, 1);
+		Consensus  consensus;
+
+		Torus.ComVal();
+		out << "Ave Value of Graph: " << Torus.Ave() << std::endl;
+
+		consensus.Input(Torus);
+		//consensus.Cal_W_EWeight(0.5);
+		consensus.Cal_W_MetroHast();
+		out << "Normal Consensus" << std::endl;
+		consensus.Cal_A(out);
+		out <<std::endl << "Random Neighbour\n";
+		consensus.Cal_A_RandNegi(out);
+		out << "\n-----------------------------------------------------\n";
+
+	}
+	out.close();
 	/*
 	Attacker Attack1;
 
@@ -27,12 +48,7 @@ void main() {
 	//A_Tour.ComVal();
 	//std::cout << A_Tour.Ave() << std::endl;
 	//consensus.Input(A_Tour);
-	consensus.Input(Tour);
-	//consensus.Cal_W_EWeight(0.5);
-	consensus.Cal_W_MetroHast();
-	consensus.Cal_A();
-	system("pause");
-	consensus.Cal_A_RandNegi();
+	
 	/*
 	Grap Ring;
 	Ring.Ring(9); // create ring graph

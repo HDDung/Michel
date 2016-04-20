@@ -12,7 +12,7 @@ public:
 	Input the parameter P and D and the graph
 	
 	*/
-	void Input(double P, double D, Grap graph);
+	void Input(long double P, long double D, Graph graph);
 
 	/*
 	Attacking process
@@ -22,7 +22,7 @@ public:
 	/*
 	Return graph has been attacked
 	*/
-	Grap Output();
+	Graph Output();
 
 	// Return number of Byzantines nodes
 	int Number_BNodes();
@@ -31,9 +31,9 @@ public:
 	~Attacker();
 
 private:
-	Grap A_graph;
-	double Prob;
-	double Delta; 
+	Graph A_graph;
+	long double Prob;
+	long double Delta; 
 	int N1;
 };
 

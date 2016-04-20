@@ -15,17 +15,17 @@ void GrapNode::AddNum(int numb)
 }
 
 
-void GrapNode::Value(double data)
+void GrapNode::Value(long double data)
 {
 	Node_value = data;
 }
 
-void GrapNode::AddChannelGain(double channel)
+void GrapNode::AddChannelGain(long double channel)
 {
 	channelGain = channel;
 }
 
-double GrapNode::Data()
+long double GrapNode::Data()
 {
 	return Node_value;
 }
@@ -52,7 +52,7 @@ int GrapNode::NodeNum()
 	return Node_number;
 }
 
-double GrapNode::ReturnChannelGain()
+long double GrapNode::ReturnChannelGain()
 {
 	return channelGain;
 }

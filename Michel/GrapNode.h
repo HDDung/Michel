@@ -11,12 +11,12 @@ public:
 	// remove node_th
 	void Remove(GrapNode*);
 	// add value of node
-	void Value(double); 
+	void Value(long double); 
 	//add channel gain
-	void AddChannelGain(double channel);
+	void AddChannelGain(long double channel);
 
 	// return value of node
-	double Data(); 
+	long double Data(); 
 	// return number of neighbor
 	int Numb_Neighbor(); 
 	//belong to neighborhood
@@ -24,15 +24,15 @@ public:
 	// return node_th
 	int NodeNum(); 
 	//return channel gain
-	double ReturnChannelGain();
+	long double ReturnChannelGain();
 
 	// return list neighbor of node
 	std::vector<GrapNode*> Neighbor();
 	
 private:
 	std::vector<GrapNode*> neighbor;
-	double Node_value;
+	long double Node_value;
 	int Node_number;
-	double channelGain;
+	long double channelGain;
 };
 
